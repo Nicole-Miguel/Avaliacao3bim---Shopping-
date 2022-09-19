@@ -1,0 +1,26 @@
+@model List<Shopping.ViewModels.LojaViewModel>
+@{
+    ViewData["Title"] = "Lojas";
+}
+
+@if(Model.Count == 0)
+{
+    <p>Nenhuma loja cadastrada.</p>
+    <a href="/Loja/Cadastrar">
+        <button>Cadastrar Loja</button>
+    </a>
+}
+else 
+{
+    <h1>Lojas</h1>
+    <p>@Model.Count lojas cadastradas</p>
+
+    @foreach(var loja in Model)
+    {
+        <h3>
+          <a href="/Loja/Detalhe/@loja.Id">@loja.Nome</a>
+        </h3>
+        <p>@loja.Descricao</p>
+        <hr> 
+    }
+}
