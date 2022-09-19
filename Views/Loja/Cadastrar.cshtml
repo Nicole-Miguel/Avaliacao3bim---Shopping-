@@ -3,31 +3,31 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Cadastro</h1>
-    <p>Utilize o formulário para cadastrar uma loja ou kiosque</p>
+    <h1>Cadastro</h1>
+    <p>Utilize o formulário abaixo para cadastrar uma loja ou kiosque</p>
 
     <form action="Cadastrar" method="post">
         <p>
-            <label for="id">Id: </label>
-            <input type="text" name="id" id="id">
+            <label for="id"><strong>Id:</strong></label>
+            <input type="text" name="id" id="id" required>
         </p>
          <p>
-           <label for="categoria">Categoria:</label>
+           <label for="categoria"><strong>Categoria: </strong></label>
             <select name="categoria" id="categoria">
                 <option value="loja">Loja</option>
                 <option value="kiosque">Kiosque</option>
             </select>
         </p>
         <p>
-            <label for="nome">Nome: </label>
-            <input type="text" name="nome" id="nome">
+            <label for="nome"><strong>Nome: </strong></label>
+            <input type="text" name="nome" id="nome" required>
         </p>
         <p>
-            <label for="descricao">Descrição</label>
-            <textarea id="descricao" name="descricao" placeholder="Faça uma breve descrição da loja/kiosque"></textarea>
+            <label for="descricao"><strong>Descrição:</strong> </label>
+            <textarea id="descricao" name="descricao" placeholder="Faça uma breve descrição da loja/kiosque." style="width:200px;" maxlength="100"></textarea>
         </p>
          <p>
-            <label for="piso">Piso:</label>
+            <label for="piso"><strong>Piso:</strong></label>
             <select name="piso" id="piso">
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -35,8 +35,8 @@
             </select>
         </p>
          <p>
-            <label for="email">Email: </label>
-            <input type="email" name="email" id="email">
+            <label for="email"><strong>Email: </strong></label>
+            <input type="email" name="email" id="email" required>
         </p>
 
         <button type="submit" id="cadastrar">Cadastrar</button>
